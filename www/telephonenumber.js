@@ -1,4 +1,5 @@
 cordova.define("cordova/plugin/telephonenumber",
+
   function(require, exports, module) {
     var exec = require("cordova/exec");
     var TelephoneNumber = function () {};
@@ -15,9 +16,8 @@ cordova.define("cordova/plugin/telephonenumber",
             "get",[]);
     };
 
-    TelephoneNumber.prototype.get1 = function(success,fail) {
-        exec(success,fail,"TelephoneNumber",
-            "get1",[]);
+    TelephoneNumber.prototype.len = function(success,fail) {
+        exec(success,fail,"TelephoneNumber","len",[]);
     };
 
     var telephoneNumber = new TelephoneNumber();

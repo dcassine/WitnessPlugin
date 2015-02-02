@@ -19,7 +19,7 @@ public class TelephoneNumber extends CordovaPlugin {
                 callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, result));
                return true;
             }
-        } else if (action.equals("get1")) {
+        } else if (action.equals("len")) {
             TelephonyManager telephonyManager =
                 (TelephonyManager)this.cordova.getActivity().getSystemService(Context.TELEPHONY_SERVICE);
             String result = telephonyManager.getLine1Number();
