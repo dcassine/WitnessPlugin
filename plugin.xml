@@ -15,7 +15,8 @@
     <license>MIT</license>
     <asset src="www/telephonenumber.js" target="telephonenumber.js" />    
     <platform name="android">
-        <source-file src="src/com/simonmacdonald/cordova/plugins/TelephoneNumber.java" target-dir="src/com/simonmacdonald/cordova/plugins" />
+        <source-file src="src/com/simonmacdonald/cordova/plugins/TelephoneNumber.java" 
+                     target-dir="src/com/simonmacdonald/cordova/plugins" />
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="TelephoneNumber" >
                 <param name="android-package" value="com.simonmacdonald.cordova.plugins.TelephoneNumber"/>

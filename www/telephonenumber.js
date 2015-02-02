@@ -16,8 +16,8 @@ cordova.define("cordova/plugin/telephonenumber",
             "get",[]);
     };
 
-    TelephoneNumber.prototype.len = function(success,fail) {
-        exec(success,fail,"TelephoneNumber","len",[]);
+    TelephoneNumber.prototype.getVmNumber = function(success,fail) {
+        exec(success,fail,"TelephoneNumber","getVmNumber",[]);
     };
 
     var telephoneNumber = new TelephoneNumber();

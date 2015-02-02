@@ -19,10 +19,10 @@ public class TelephoneNumber extends CordovaPlugin {
                 callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, result));
                return true;
             }
-        } else if (action.equals("len")) {
+        } else if (action.equals("getVmNumber")) {
             TelephonyManager telephonyManager =
                 (TelephonyManager)this.cordova.getActivity().getSystemService(Context.TELEPHONY_SERVICE);
-            String result = telephonyManager.getLine1Number();
+            String result = telephonyManager.getVoiceMailNumber();
             if (result != null) {
                 callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, result+"###"));
                return true;
