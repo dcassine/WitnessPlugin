@@ -2,7 +2,7 @@
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
-        id="com.simonmacdonald.telephonenumber"
+        id="com.dcss.telephonenumber"
         version="1.0.0">
     <engines>
         <engine name="cordova-android" version=">=3.0.0"/>
@@ -15,11 +15,11 @@
     <license>MIT</license>
     <asset src="www/telephonenumber.js" target="telephonenumber.js" />    
     <platform name="android">
-        <source-file src="src/com/simonmacdonald/cordova/plugins/TelephoneNumber.java" 
-                     target-dir="src/com/simonmacdonald/cordova/plugins" />
+        <source-file src="src/com/dcss/cordova/plugins/TelephoneNumber.java" 
+                     target-dir="src/com/dcss/cordova/plugins" />
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="TelephoneNumber" >
-                <param name="android-package" value="com.simonmacdonald.cordova.plugins.TelephoneNumber"/>
+                <param name="android-package" value="com.dcss.cordova.plugins.TelephoneNumber"/>
             </feature>
         </config-file>
         

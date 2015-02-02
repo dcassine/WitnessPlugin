@@ -1,10 +1,10 @@
-package com.simonmacdonald.cordova.plugins;
+package com.dcss.cordova.plugins;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.PluginResult;
 import org.json.JSONArray;
-
+import org.json.JSONObject;
 import android.content.Context;
 import android.telephony.TelephonyManager;
 
@@ -19,14 +19,23 @@ public class TelephoneNumber extends CordovaPlugin {
                 callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, result));
                return true;
             }
-        } else if (action.equals("getVmNumber")) {
-            TelephonyManager telephonyManager =
+        } else if (action.equals("getInfo")) {
+          TelephonyManager telephonyManager =
                 (TelephonyManager)this.cordova.getActivity().getSystemService(Context.TELEPHONY_SERVICE);
-            String result = telephonyManager.getVoiceMailNumber();
-            if (result != null) {
-                callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, result+"###"));
-               return true;
-            }
+                    
+          JSONObject result = new JSONObject();
+          result.put(telephonyManager.getLine1Number());
+          result.put(telephonyManager.getVoiceMailNumber());
+          result.put("DeviceId", telephonyManager.getDeviceId());
+          result.put("SimCountryIso", telephonyManager.getSimCountryIso());
+          result.put("SimOperator", telephonyManager.getSimOperator());
+          result.put("SimOperatorName", telephonyManager.getSimOperatorName());
+          result.put("SimSerialNumber", telephonyManager.getSimSerialNumber());
+          result.put("SimState", telephonyManager.getSimState());
+          result.put("SubscriberId", telephonyManager.getSubscriberId());
+
+          callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, result));
+             return true;
         }
         callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.ERROR));
         return false;

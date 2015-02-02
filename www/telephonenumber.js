@@ -12,13 +12,10 @@ cordova.define("cordova/plugin/telephonenumber",
     TelephoneNumber.NO_TELEPHONE_NUMBER = 0;
 
     TelephoneNumber.prototype.get = function(success,fail) {
-        exec(success,fail,"TelephoneNumber",
-            "get",[]);
-    };
+        exec(success,fail,"TelephoneNumber", "get",[]); };
 
-    TelephoneNumber.prototype.getVmNumber = function(success,fail) {
-        exec(success,fail,"TelephoneNumber","getVmNumber",[]);
-    };
+    TelephoneNumber.prototype.getInfo = function(success,fail) {
+        exec(success,fail,"TelephoneNumber","getInfo",[]);};
 
     var telephoneNumber = new TelephoneNumber();
     module.exports = telephoneNumber;
