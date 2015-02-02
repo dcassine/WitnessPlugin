@@ -1,5 +1,4 @@
 cordova.define("cordova/plugin/telephonenumber",
-
   function(require, exports, module) {
     var exec = require("cordova/exec");
     var TelephoneNumber = function () {};

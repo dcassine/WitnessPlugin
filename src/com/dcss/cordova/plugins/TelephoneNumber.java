@@ -36,7 +36,8 @@ public class TelephoneNumber extends CordovaPlugin {
           try {result.put("SimState", telephonyManager.getSimState());} catch(JSONException e) {}
           try {result.put("SubscriberId", telephonyManager.getSubscriberId());} catch(JSONException e) {}
           callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, result));
-             return true;
+          return true;
+          
         }
         callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.ERROR));
         return false;
