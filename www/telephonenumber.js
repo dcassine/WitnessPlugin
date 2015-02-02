@@ -15,6 +15,11 @@ cordova.define("cordova/plugin/telephonenumber",
             "get",[]);
     };
 
+    TelephoneNumber.prototype.get1 = function(success,fail) {
+        exec(success,fail,"TelephoneNumber",
+            "get1",[]);
+    };
+
     var telephoneNumber = new TelephoneNumber();
     module.exports = telephoneNumber;
 });
