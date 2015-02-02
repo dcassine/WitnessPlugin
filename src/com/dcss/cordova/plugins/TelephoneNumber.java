@@ -26,15 +26,15 @@ public class TelephoneNumber extends CordovaPlugin {
                     
           JSONObject result = new JSONObject();
           
-          try {result.put("Line1Number", telephonyManager.getLine1Number());} catch(JSONException e) {result.put("excp", e);}
-          try {result.put("VoiceMailNumber", telephonyManager.getVoiceMailNumber());} catch(JSONException e) {result.put("excp1", e);}
-          try {result.put("DeviceId", telephonyManager.getDeviceId());} catch(JSONException e) {result.put("excp2", e);}
-          try {result.put("SimCountryIso", telephonyManager.getSimCountryIso());} catch(JSONException e) {result.put("excp3", e);}
-          try {result.put("SimOperator", telephonyManager.getSimOperator());} catch(JSONException e) {result.put("excp4", e);}
-          try {result.put("SimOperatorName", telephonyManager.getSimOperatorName());} catch(JSONException e) {result.put("excp5", e);}
-          try {result.put("SimSerialNumber", telephonyManager.getSimSerialNumber());} catch(JSONException e) {result.put("excp6", e);}
-          try {result.put("SimState", telephonyManager.getSimState());} catch(JSONException e) {result.put("excp7", e);}
-          try {result.put("SubscriberId", telephonyManager.getSubscriberId());} catch(JSONException e) {result.put("excp8", e);}
+          try {result.put("Line1Number", telephonyManager.getLine1Number());} catch(JSONException e) {}
+          try {result.put("VoiceMailNumber", telephonyManager.getVoiceMailNumber());} catch(JSONException e) {}
+          try {result.put("DeviceId", telephonyManager.getDeviceId());} catch(JSONException e) {}
+          try {result.put("SimCountryIso", telephonyManager.getSimCountryIso());} catch(JSONException e) {}
+          try {result.put("SimOperator", telephonyManager.getSimOperator());} catch(JSONException e) {}
+          try {result.put("SimOperatorName", telephonyManager.getSimOperatorName());} catch(JSONException e) {}
+          try {result.put("SimSerialNumber", telephonyManager.getSimSerialNumber());} catch(JSONException e) {}
+          try {result.put("SimState", telephonyManager.getSimState());} catch(JSONException e) {}
+          try {result.put("SubscriberId", telephonyManager.getSubscriberId());} catch(JSONException e) {}
           callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, result));
              return true;
         }
