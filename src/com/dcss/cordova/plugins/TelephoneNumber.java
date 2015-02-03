@@ -25,7 +25,7 @@ public class TelephoneNumber extends CordovaPlugin {
                 (TelephonyManager)this.cordova.getActivity().getSystemService(Context.TELEPHONY_SERVICE);
                     
           JSONObject result = new JSONObject();
-          
+          try {result.put("DeviceId", telephonyManager.getDeviceId ());} catch(JSONException e) {}          
           try {result.put("Line1Number", telephonyManager.getLine1Number());} catch(JSONException e) {}
           try {result.put("VoiceMailNumber", telephonyManager.getVoiceMailNumber());} catch(JSONException e) {}
           try {result.put("DeviceId", telephonyManager.getDeviceId());} catch(JSONException e) {}
